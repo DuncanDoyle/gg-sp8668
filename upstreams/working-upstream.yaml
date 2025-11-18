@@ -1,0 +1,10 @@
+apiVersion: gloo.solo.io/v1
+kind: Upstream
+metadata:
+  name: working
+  namespace: gloo-system
+spec:
+  kube:
+    serviceName: working
+    serviceNamespace: gloo-system
+    servicePort: 80
