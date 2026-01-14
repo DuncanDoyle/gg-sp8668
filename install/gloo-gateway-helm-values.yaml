@@ -1,7 +1,7 @@
 gloo:
   kubeGateway:
     # Enable K8s Gateway integration
-    enabled: false
+    enabled: true
   gatewayProxies:
     gatewayProxy:
       # ddoyle: Not able to set this to "true" (i.e. disable the default proxy deployment), as that gives an error with the Helm templates ...
@@ -50,7 +50,7 @@ gloo:
     devMode: true
 
     # Disable auto-generation of in-memory Upstreams and Envoy clusters for all kubernetes destinations
-    disableKubernetesDestinations: true  
+    disableKubernetesDestinations: true
 
     # Configure some standard descriptors to be used by the rate-limit portion of our tests
     # This rule states: "if a request has a descriptor with key=generic_key, value=2, apply 1 requests/second rate limit"
